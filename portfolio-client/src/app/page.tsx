@@ -13,7 +13,7 @@ export default function Home() {
           height={38}
           priority
         />
-        Website by Mason Harniess.
+        Website by Mason Harniess. Second deployment attempt.
         <ol>
           <li>
             Get started by editing <code>src/app/page.tsx</code>.
