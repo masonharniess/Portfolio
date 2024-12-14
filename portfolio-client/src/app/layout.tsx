@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {montserrat_bold} from "@/app/fonts/fonts";
+import {inknut_antiqua_light} from "@/app/fonts/fonts";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat_bold.className}>
+      <body className={inknut_antiqua_light.className}>
         {children}
       </body>
     </html>
