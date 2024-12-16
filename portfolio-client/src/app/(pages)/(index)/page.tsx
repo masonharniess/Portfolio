@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <p className={inknut_antiqua_bold.className}>Website by Mason Harniess.</p>
-        <p>Work in progress.</p>
+        <div className={styles.intro_card}>
+          <p className={inknut_antiqua_bold.className}>Website by Mason Harniess.</p>
+          <p>Work in progress. Come back soon.</p>
+        </div>
       </main>
     </div>
   );
