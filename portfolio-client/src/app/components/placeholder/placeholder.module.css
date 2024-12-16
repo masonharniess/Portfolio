@@ -1,0 +1,7 @@
+.placeholder {
+    border: 1px solid #d9d5d4;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
