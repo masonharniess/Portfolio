@@ -1,4 +1,5 @@
 using portfolio_server.Configuration;
+using portfolio_server.Services.LastFM;
 
 namespace portfolio_server;
 
@@ -16,6 +17,8 @@ public class Program
         builder.Services.AddSwaggerGen();
         
         builder.Services.Configure<LastfmOptions>(builder.Configuration.GetSection("LastfmOptions"));
+        builder.Services.AddHttpClient<LastfmService>();
+        
         
         var app = builder.Build();
 

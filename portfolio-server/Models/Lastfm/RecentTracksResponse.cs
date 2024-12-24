@@ -23,13 +23,13 @@ public class RecentTracksAttributes
     public string User { get; set; }
     
     [JsonPropertyName("totalPages")]
-    public int TotalPages { get; set; }
+    public string TotalPages { get; set; }
     
     [JsonPropertyName("page")]
     public string Page { get; set; }
     
     [JsonPropertyName("perPage")]
-    public int PerPage { get; set; }
+    public string PerPage { get; set; }
     
     [JsonPropertyName("total")]
     public string Total { get; set; }
@@ -41,7 +41,7 @@ public class Track
     public Artist Artist { get; set; }
     
     [JsonPropertyName("streamable")]
-    public bool Streamable { get; set; }
+    public string Streamable { get; set; }
     
     [JsonPropertyName("image")]
     public List<Image> Images { get; set; }
@@ -103,6 +103,6 @@ public class Date
 public class NowPlayingAttribute
 {
     [JsonPropertyName("nowplaying")]
-    public bool NowPlaying { get; set; }
+    public string NowPlaying { get; set; }
 }
 

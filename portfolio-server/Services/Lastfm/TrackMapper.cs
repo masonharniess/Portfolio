@@ -7,7 +7,7 @@ public static class TrackMapper
     {
         Image? image = externalTrack.Images?.FirstOrDefault(img => img.Size == "small") ?? externalTrack.Images?.FirstOrDefault();
 
-        bool isNowPlaying = externalTrack.NowPlayingAttr?.NowPlaying == true;
+        bool isNowPlaying = externalTrack.NowPlayingAttr?.NowPlaying == "true";
 
         DateTime? datePlayed = null;
         if (!isNowPlaying && externalTrack.Date != null && long.TryParse(externalTrack.Date.Uts, out var UtsTimeStamp))

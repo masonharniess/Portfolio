@@ -32,3 +32,12 @@
 /Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/obj/Debug/net8.0/portfolio-server.pdb
 /Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/obj/Debug/net8.0/portfolio-server.genruntimeconfig.cache
 /Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/obj/Debug/net8.0/ref/portfolio-server.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/masonharniess/Programming/Projects/Web-Dev/Portfolio/portfolio-server/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
