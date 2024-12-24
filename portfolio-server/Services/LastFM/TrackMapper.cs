@@ -1,10 +1,9 @@
-
 using portfolio_server.Models.LastFM;
 namespace portfolio_server.Services.LastFM;
 
-public class TrackMapper
+public static class TrackMapper
 {
-    public static TrackDTO ToInternalModel(Track externalTrack)
+    public static TrackDto ToInternalModel(this Track externalTrack)
     {
         Image? image = externalTrack.Images?.FirstOrDefault(img => img.Size == "small") ?? externalTrack.Images?.FirstOrDefault();
 
@@ -16,7 +15,7 @@ public class TrackMapper
             datePlayed = DateTimeOffset.FromUnixTimeSeconds(UtsTimeStamp).DateTime;
         }
 
-        return new TrackDTO
+        return new TrackDto
         {
             Artist = externalTrack.Artist.Name,
             Track = externalTrack.Name,
@@ -25,9 +24,5 @@ public class TrackMapper
             DatePlayed = datePlayed,
             IsNowPlaying = isNowPlaying
         };
-
-
-
-
     }
 }

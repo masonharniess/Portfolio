@@ -2,7 +2,7 @@ namespace portfolio_server.Models.LastFM;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
 
-public class TrackDTO
+public class TrackDto
 {
     public string Track { get; set; }
     public string Album { get; set; }
