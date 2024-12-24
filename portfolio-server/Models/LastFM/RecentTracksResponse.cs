@@ -2,7 +2,6 @@ namespace portfolio_server.Models.LastFM;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
 
-
 public class RecentTracksResponse
 {
     [JsonPropertyName("recenttracks")]
@@ -13,33 +12,50 @@ public class RecentTracksData
 {
     [JsonPropertyName("track")]
     public List<Track> Tracks { get; set; }
+    
+    [JsonPropertyName("@attr")]
+    public Attr Attributes { get; set; }
 }
 
 public class Track
 {
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-    
     [JsonPropertyName("artist")]
     public Artist Artist { get; set; }
     
-    [JsonPropertyName("album")]
-    public Album Album { get; set; }
+    [JsonPropertyName("streamable")]
+    public bool Streamable { get; set; }
     
     [JsonPropertyName("image")]
     public List<Image> Images { get; set; }
     
-    [JsonPropertyName("date")]
-    public TrackDate Date { get; set; }
+    [JsonPropertyName("mbid")]
+    public string Mbid { get; set; }
     
+    [JsonPropertyName("album")]
+    public Album Album { get; set; }
+    
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+    
+    // Holds date of play if it is not currently being played
     [JsonPropertyName("@attr")]
-    public TrackAttr Attr { get; set; }
+    public Attr Attr { get; set; }
+    
+    [JsonPropertyName("url")]
+    public string URL { get; set; }
+    
+    // Holds play time if it is currently being played
+    [JsonPropertyName("date")]
+    public Date Date { get; set; }
 }
 
 public class Artist 
 {
-    [JsonPropertyName("#artist")]
-    public string Name { get; set; }
+    [JsonPropertyName("mbid")]
+    public string Mbid { get; set; }
+    
+    [JsonPropertyName("#text")]
+    public string Text { get; set; }
 }
 
 public class Album
@@ -54,10 +70,10 @@ public class Image
     public string Size { get; set; }
     
     [JsonPropertyName("#text")]
-    public string Url { get; set; }
+    public string Text { get; set; }
 }
 
-public class TrackDate
+public class Date
 {
     [JsonPropertyName("uts")]
     public string UTS { get; set; }
@@ -66,8 +82,20 @@ public class TrackDate
     public string Text { get; set; }
 }
 
-public class TrackAttr
+public class Attr
 {
-    [JsonPropertyName("nowplaying")]
-    public string IsNowPlaying { get; set; }
+    [JsonPropertyName("user")]
+    public string User { get; set; }
+    
+    [JsonPropertyName("totalPages")]
+    public int TotalPages { get; set; }
+    
+    [JsonPropertyName("page")]
+    public string Page { get; set; }
+    
+    [JsonPropertyName("perPage")]
+    public int PerPage { get; set; }
+    
+    [JsonPropertyName("total")]
+    public string Total { get; set; }
 }
