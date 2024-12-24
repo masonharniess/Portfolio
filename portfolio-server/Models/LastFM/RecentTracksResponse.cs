@@ -5,16 +5,34 @@ using System.Collections.Generic;
 public class RecentTracksResponse
 {
     [JsonPropertyName("recenttracks")]
-    public RecentTracksData RecentTracks { get; set; }
+    public RecentTracks RecentTracks { get; set; }
 }
 
-public class RecentTracksData
+public class RecentTracks
 {
     [JsonPropertyName("track")]
     public List<Track> Tracks { get; set; }
     
     [JsonPropertyName("@attr")]
-    public Attr Attributes { get; set; }
+    public RecentTracksAttributes RecentTracksAttr { get; set; }
+}
+
+public class RecentTracksAttributes
+{
+    [JsonPropertyName("user")]
+    public string User { get; set; }
+    
+    [JsonPropertyName("totalPages")]
+    public int TotalPages { get; set; }
+    
+    [JsonPropertyName("page")]
+    public string Page { get; set; }
+    
+    [JsonPropertyName("perPage")]
+    public int PerPage { get; set; }
+    
+    [JsonPropertyName("total")]
+    public string Total { get; set; }
 }
 
 public class Track
@@ -39,7 +57,7 @@ public class Track
     
     // Holds date of play if it is not currently being played
     [JsonPropertyName("@attr")]
-    public Attr Attr { get; set; }
+    public NowPlayingAttribute NowPlayingAttr { get; set; }
     
     [JsonPropertyName("url")]
     public string URL { get; set; }
@@ -82,20 +100,9 @@ public class Date
     public string Text { get; set; }
 }
 
-public class Attr
+public class NowPlayingAttribute
 {
-    [JsonPropertyName("user")]
-    public string User { get; set; }
-    
-    [JsonPropertyName("totalPages")]
-    public int TotalPages { get; set; }
-    
-    [JsonPropertyName("page")]
-    public string Page { get; set; }
-    
-    [JsonPropertyName("perPage")]
-    public int PerPage { get; set; }
-    
-    [JsonPropertyName("total")]
-    public string Total { get; set; }
+    [JsonPropertyName("nowplaying")]
+    public bool NowPlaying { get; set; }
 }
+
