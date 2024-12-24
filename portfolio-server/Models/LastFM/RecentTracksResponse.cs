@@ -1,6 +1,6 @@
-namespace portfolio_server.Models.LastFM;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
+namespace portfolio_server.Models.LastFM;
 
 public class RecentTracksResponse
 {
@@ -73,7 +73,7 @@ public class Artist
     public string Mbid { get; set; }
     
     [JsonPropertyName("#text")]
-    public string Text { get; set; }
+    public string Name { get; set; }
 }
 
 public class Album
@@ -88,13 +88,13 @@ public class Image
     public string Size { get; set; }
     
     [JsonPropertyName("#text")]
-    public string Text { get; set; }
+    public string Url { get; set; }
 }
 
 public class Date
 {
     [JsonPropertyName("uts")]
-    public string UTS { get; set; }
+    public string Uts { get; set; }
     
     [JsonPropertyName("#text")]
     public string Text { get; set; }
