@@ -1,5 +1,5 @@
 using portfolio_server.Models.LastFM;
-namespace portfolio_server.Services.LastFM;
+namespace portfolio_server.Utility.LastFM;
 
 public static class TrackMapper
 {

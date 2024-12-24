@@ -2,7 +2,7 @@ using System.Text.Json;
 using Microsoft.Extensions.Options;
 using portfolio_server.Configuration;
 using portfolio_server.Models.LastFM;
-using portfolio_server.Services.LastFM;
+using portfolio_server.Utility.LastFM;
 
 namespace portfolio_server.Services.LastFM;
 
