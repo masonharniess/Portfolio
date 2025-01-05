@@ -21,13 +21,13 @@ public class Program
         
         builder.Services.AddCors(options =>
         {
-            options.AddPolicy("CorsPolicy",
+            options.AddPolicy("DevCorsPolicy",
                 policy => policy
                     .WithOrigins("http://localhost:3000") // or "*"
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             
-            options.AddPolicy("CorsPolicy",
+            options.AddPolicy("ProdCorsPolicy",
                 policy => policy
                     .WithOrigins("https://www.masonharniess.com/") // or "*"
                     .AllowAnyMethod()
@@ -43,7 +43,8 @@ public class Program
             app.UseSwaggerUI();
         }
         
-        app.UseCors("CorsPolicy");
+        app.UseCors("DevCorsPolicy");
+        app.UseCors("ProdCorsPolicy");
 
         app.UseHttpsRedirection();
 
