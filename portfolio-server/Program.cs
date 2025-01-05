@@ -21,11 +21,17 @@ public class Program
         
         builder.Services.AddCors(options =>
         {
-            options.AddPolicy("AllowVercelOrigin",
+            options.AddPolicy("CorsPolicy",
                 policy => policy
                     .WithOrigins("http://localhost:3000") // or "*"
                     .AllowAnyMethod()
                     .AllowAnyHeader());
+            
+            // options.AddPolicy("CorsPolicy",
+            //     policy => policy
+            //         .WithOrigins("http://localhost:3000") // or "*"
+            //         .AllowAnyMethod()
+            //         .AllowAnyHeader());
         });
         
         var app = builder.Build();
@@ -37,7 +43,7 @@ public class Program
             app.UseSwaggerUI();
         }
         
-        app.UseCors("AllowVercelOrigin");
+        app.UseCors("CorsPolicy");
 
         app.UseHttpsRedirection();
 
