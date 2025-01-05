@@ -27,11 +27,11 @@ public class Program
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             
-            // options.AddPolicy("CorsPolicy",
-            //     policy => policy
-            //         .WithOrigins("http://localhost:3000") // or "*"
-            //         .AllowAnyMethod()
-            //         .AllowAnyHeader());
+            options.AddPolicy("CorsPolicy",
+                policy => policy
+                    .WithOrigins("https://www.masonharniess.com/") // or "*"
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
         });
         
         var app = builder.Build();
