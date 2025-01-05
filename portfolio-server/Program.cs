@@ -17,8 +17,16 @@ public class Program
         builder.Services.AddSwaggerGen();
         
         builder.Services.Configure<LastfmOptions>(builder.Configuration.GetSection("LastfmOptions"));
-        builder.Services.AddHttpClient<LastfmService>();
+        builder.Services.AddHttpClient<ILastfmService, LastfmService>();
         
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowVercelOrigin",
+                policy => policy
+                    .WithOrigins("http://localhost:3000") // or "*"
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+        });
         
         var app = builder.Build();
 
@@ -28,6 +36,8 @@ public class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+        
+        app.UseCors("AllowVercelOrigin");
 
         app.UseHttpsRedirection();
 

@@ -33,6 +33,7 @@ public class LastfmService : ILastfmService
         }
 
         string jsonString = await response.Content.ReadAsStringAsync();
+        
         RecentTracksResponse? lastfmData = JsonSerializer.Deserialize<RecentTracksResponse>(jsonString,
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 

@@ -8,9 +8,9 @@ namespace portfolio_server.Controllers.Lastfm;
 [Route("api/lastfm")]
 public class LastfmController : ControllerBase
 {
-    private readonly LastfmService _lastfmService;
+    private readonly ILastfmService _lastfmService;
     
-    public LastfmController(LastfmService lastfmService)
+    public LastfmController(ILastfmService lastfmService)
     {
         _lastfmService = lastfmService;
     }
@@ -18,7 +18,7 @@ public class LastfmController : ControllerBase
     [HttpGet("recent/{username}")]
     public async Task<ActionResult<List<TrackDto>>> GetRecentTracks(string username, [FromQuery] int limit = 5)
     {
-        var tracks = await _lastfmService.GetRecentTracksAsync(username, limit);
+        List<TrackDto> tracks = await _lastfmService.GetRecentTracksAsync(username, limit);
         return Ok(tracks);
     }
 }

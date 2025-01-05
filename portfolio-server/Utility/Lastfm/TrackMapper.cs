@@ -5,7 +5,7 @@ public static class TrackMapper
 {
     public static TrackDto ToInternalModel(this Track externalTrack)
     {
-        Image? image = externalTrack.Images?.FirstOrDefault(img => img.Size == "small") ?? externalTrack.Images?.FirstOrDefault();
+        Image? image = externalTrack.Images?.FirstOrDefault(img => img.Size == "large") ?? externalTrack.Images?.FirstOrDefault();
 
         bool isNowPlaying = externalTrack.NowPlayingAttr?.NowPlaying == "true";
 

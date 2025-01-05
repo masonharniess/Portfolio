@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Placeholder from "@/app/components/placeholder/placeholder";
+import LastfmCard from "@/app/components/Lastfm/LastfmCard";
 // import LastfmCard from "@/app/components/Lastfm/LastfmCard";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Placeholder/>
+        <LastfmCard/>
       </main>
     </div>
   );
