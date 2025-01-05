@@ -29,7 +29,7 @@ public class Program
             
             options.AddPolicy("ProdCorsPolicy",
                 policy => policy
-                    .WithOrigins("https://www.masonharniess.com/") // or "*"
+                    .WithOrigins("https://www.masonharniess.com")
                     .AllowAnyMethod()
                     .AllowAnyHeader());
         });
@@ -39,12 +39,17 @@ public class Program
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
+            app.UseCors("DevCorsPolicy");
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+        else
+        {
+            app.UseCors("ProdCorsPolicy");
+        }
         
-        app.UseCors("DevCorsPolicy");
-        app.UseCors("ProdCorsPolicy");
+        
+        
 
         app.UseHttpsRedirection();
 
