@@ -11,12 +11,6 @@ export default function Home() {
       <main className={styles.main}>
 
         <MainSection/>
-        <MainSection/>
-        <MainSection/>
-        <MainSection/>
-        <MainSection/>
-        <MainSection/>
-        <MainSection/>
         {/*/!*<TestCard/>*!/*/}
         {/*/!*<LastfmCard/>*!/*/}
       </main>
