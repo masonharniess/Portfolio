@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {inknut_antiqua_light} from "@/app/fonts/fonts";
+import {roboto_standard} from "@/app/fonts/fonts";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inknut_antiqua_light.className}>
+      <body className={roboto_standard.className}>
         {children}
       </body>
     </html>

@@ -1,14 +1,16 @@
 import styles from "./page.module.css";
-import Placeholder from "@/app/components/placeholder/placeholder";
-import LastfmCard from "@/app/components/Lastfm/LastfmCard";
-// import LastfmCard from "@/app/components/Lastfm/LastfmCard";
+import MainSection from "@/app/components/mainSection/mainSection";
+// import LastfmCard from "@/app/components/lastfm/lastfm-card";
+// import TestCard from "@/app/components/testing/test-card";
+
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Placeholder/>
-        <LastfmCard/>
+        <MainSection/>
+        {/*<TestCard/>*/}
+        {/*<LastfmCard/>*/}
       </main>
     </div>
   );

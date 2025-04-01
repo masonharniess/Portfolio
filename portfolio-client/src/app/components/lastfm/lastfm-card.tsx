@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import styles from "./lastfm.module.css";
-import { inknut_antiqua_bold } from "@/app/fonts/fonts";
+import {roboto_bold} from "@/app/fonts/fonts";
 
 interface LastfmTrack {
   track: string;
@@ -12,8 +12,24 @@ interface LastfmTrack {
   isNowPlaying: boolean;
 }
 
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick(){
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
+
 export default function LastfmCard() {
   const [recentTracks, setRecentTracks] = useState<LastfmTrack[]>([]);
+
+
 
   useEffect(() => {
     const fetchUrl =
@@ -31,7 +47,9 @@ export default function LastfmCard() {
 
   return (
     <div className={styles.lastfm_card}>
-      <p className={inknut_antiqua_bold.className}>Last.fm</p>
+      <MyButton/>
+      <MyButton/>
+      <p className={roboto_bold.className}>Last.fm</p>
       <p>Recently played tracks:</p>
       {recentTracks.map((track, index) => (
         <div key={index} className={styles.track}>
