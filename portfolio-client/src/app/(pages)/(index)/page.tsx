@@ -11,8 +11,14 @@ export default function Home() {
       <main className={styles.main}>
 
         <MainSection/>
-        {/*<TestCard/>*/}
-        {/*<LastfmCard/>*/}
+        <MainSection/>
+        <MainSection/>
+        <MainSection/>
+        <MainSection/>
+        <MainSection/>
+        <MainSection/>
+        {/*/!*<TestCard/>*!/*/}
+        {/*/!*<LastfmCard/>*!/*/}
       </main>
     </div>
   );

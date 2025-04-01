@@ -1,5 +1,6 @@
 .page {
-
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-rows: 20px 1fr 20px;
   justify-items: center;
@@ -10,19 +11,18 @@
 
 .background {
   background-repeat: no-repeat;
-  background-position: top left;
-  background-image: url('/BackgroundImage.jpg');
-  position: absolute;
-  top: -30px; /* hide white edges */
-  left: -30px; /* hide white edges */
-  width: 100vw;
-  height: 100vh;
+  background-image: url('/BackgroundImageBlur.jpg');
+  position: fixed; /* fix the background relative to the viewport */
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
   background-size: cover;
-  /*background-attachment: fixed;*/
-  filter: blur(16px);
-  transform: scale(1.05); /* slight scale to hide blur edges */
-  transform-origin: top left;  /* Anchor scaling at top left */
+  transform: translate(-50%, -50%) scale(1.1); /* centre and scale */
+  transform-origin: center;
+  z-index: -1; /* ensure the background stays behind your content */
 }
+
 
 @media (prefers-color-scheme: dark) {
   .page {
