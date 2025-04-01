@@ -2,11 +2,26 @@
 
   display: grid;
   grid-template-rows: 20px 1fr 20px;
-  align-items: first;
   justify-items: center;
   min-height: 100svh;
   padding: 80px;
   gap: 64px;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-image: url('/BackgroundImage.jpg');
+  position: absolute;
+  top: -30px; /* hide white edges */
+  left: -30px; /* hide white edges */
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  /*background-attachment: fixed;*/
+  filter: blur(16px);
+  transform: scale(1.05); /* slight scale to hide blur edges */
+  transform-origin: top left;  /* Anchor scaling at top left */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,7 +73,6 @@
   border-radius: 128px;
   height: 48px;
   padding: 0 20px;
-  border: none;
   border: 1px solid transparent;
   transition:
     background 0.2s,

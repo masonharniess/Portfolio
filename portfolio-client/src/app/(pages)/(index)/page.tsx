@@ -7,7 +7,9 @@ import MainSection from "@/app/components/mainSection/mainSection";
 export default function Home() {
   return (
     <div className={styles.page}>
+      <img className={styles.background}/>
       <main className={styles.main}>
+
         <MainSection/>
         {/*<TestCard/>*/}
         {/*<LastfmCard/>*/}
