@@ -14,7 +14,7 @@ export default function Home() {
 
         <MainSection/>
         {/*<TestCard/>*/}
-        {/*<LastfmCard/>*/}
+        <LastfmCard/>
       </main>
     </div>
   );

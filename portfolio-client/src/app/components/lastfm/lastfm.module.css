@@ -1,7 +1,51 @@
 .lastfm_card {
-    border: 1px solid #d9d5d4;
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(80px); /* frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle white border */
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     text-align: left;
+    color: #ffffff; /* font colour */
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(44, 30, 30, 0.15);
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lastfm_card_title {
+    font-size: 32px;
+}
+
+.album_cover {
+    border-radius: 13px;
+    /*border: 1px solid rgba(255, 255, 255, 0.3); !* subtle white border *!*/
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    width: 75px;
+    height: 75px;
+
+}
+
+.track {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.track_header {
+    font-size: 18px;
+}
+
+.track_info {
+    margin-bottom: 10px;
+    font-size: 18px;
+
+}
+
+.track_info_sub {
+    color: #EAEAF1B3;
+    font-size: 16px;
 }

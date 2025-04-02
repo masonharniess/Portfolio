@@ -33,16 +33,17 @@ export default function LastfmCard() {
 
   return (
     <div className={styles.lastfm_card}>
-
-      <p className={roboto_bold.className}>Last.fm</p>
-      <p>Recently played tracks:</p>
+      <p className={`${styles.lastfm_card_title} ${roboto_bold.className}`}>Recently Played Songs</p>
       {recentTracks.map((track, index) => (
         <div key={index} className={styles.track}>
-          <img src={track.albumImage} alt={`${track.album} cover`} />
+          <img className={styles.album_cover} src={track.albumImage} alt={`${track.album} cover`} />
           <div className={styles.track_info}>
-            <strong>{track.track}</strong> by {track.artist}
-            <div>Album: {track.album}</div>
-            <div>
+            <div className={styles.track_header}>
+              <span className={roboto_bold.className}>{track.track}</span> |
+              <span className={roboto_bold.className}> {track.album}</span>
+            </div>
+            <div className={styles.track_info_sub}>
+              <p>by {track.artist}</p>
               Played at: {new Date(track.datePlayed).toLocaleString()}
             </div>
             {track.isNowPlaying && <span>Now playing!</span>}
