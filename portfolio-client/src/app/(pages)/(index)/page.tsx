@@ -1,7 +1,9 @@
+"use client"
 import styles from "./page.module.css";
 import MainSection from "@/app/components/mainSection/mainSection";
 // import LastfmCard from "@/app/components/lastfm/lastfm-card";
-// import TestCard from "@/app/components/testing/test-card";
+import TestCard from "@/app/components/testing/test-card";
+import LastfmCard from "@/app/components/lastfm/lastfm-card";
 
 
 export default function Home() {
@@ -11,8 +13,8 @@ export default function Home() {
       <main className={styles.main}>
 
         <MainSection/>
-        {/*/!*<TestCard/>*!/*/}
-        {/*/!*<LastfmCard/>*!/*/}
+        {/*<TestCard/>*/}
+        {/*<LastfmCard/>*/}
       </main>
     </div>
   );

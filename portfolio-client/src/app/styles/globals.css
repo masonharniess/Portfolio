@@ -5,7 +5,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /*--background: #0a0a0a;*/
     --foreground: #ededed;
   }
 }
@@ -14,7 +14,7 @@ html, body {
 }
 
 body {
-    color: var(--foreground);
+    color: white;
     height: 100vh;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
@@ -22,6 +22,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     min-height: 100vh;
+    overflow: hidden;
+    /*background-color: #050505;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 * {
@@ -30,16 +35,11 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+/*@media (prefers-color-scheme: dark) {*/
+/*  html {*/
+/*    color-scheme: dark;*/
+/*  }*/
+/*}*/
 
 .default_card {
   border: 1px solid #d9d5d4;

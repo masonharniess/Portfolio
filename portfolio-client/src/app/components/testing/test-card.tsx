@@ -1,12 +1,18 @@
-import {ReactElement} from "react";
+import {useState} from "react";
+import MyButton from "@/app/components/button/button";
 
-export default function TestCard() {
-  const content: ReactElement = <p> hello there my Qq name</p>;
-  const isLoggedIn: boolean = true;
+export default function MyApp() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
 
   return (
     <div>
-      {isLoggedIn && content}
+      <h1>Counters that update together</h1>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
     </div>
   );
 }
