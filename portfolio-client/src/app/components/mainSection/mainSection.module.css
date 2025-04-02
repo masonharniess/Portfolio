@@ -16,12 +16,12 @@
 }
 
 .placeholder_card_title {
-    font-size: 44px;
+    font-size: 32px;
     opacity: 1;
 }
 
 .placeholder_card_body {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.4;
     text-align: justify;
 }
