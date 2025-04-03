@@ -6,8 +6,8 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     text-align: left;
     color: #ffffff; /* font colour */
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
+    max-width: 400px;
     background: rgba(44, 30, 30, 0.15);
     font-size: 18px;
     display: flex;
@@ -21,12 +21,10 @@
 
 .album_cover {
     border-radius: 13px;
-    /*border: 1px solid rgba(255, 255, 255, 0.3); !* subtle white border *!*/
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
     width: 75px;
     height: 75px;
-
 }
 
 .track {
