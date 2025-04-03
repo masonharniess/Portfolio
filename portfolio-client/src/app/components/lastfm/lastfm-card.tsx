@@ -19,8 +19,8 @@ export default function LastfmCard() {
 
   useEffect(() => {
     const fetchUrl =
-      //"http://localhost:5242/api/lastfm/recent/custardflan?limit=5";
-      "https://portfolio-server-hwfnahhbh0hqb2a8.uksouth-01.azurewebsites.net/api/lastfm/recent/custardflan?limit=5";
+      "http://localhost:5242/api/lastfm/recent/custardflan?limit=5";
+      // "https://portfolio-server-hwfnahhbh0hqb2a8.uksouth-01.azurewebsites.net/api/lastfm/recent/custardflan?limit=5";
 
     fetch(fetchUrl)
       .then((res) => res.json())
@@ -45,7 +45,7 @@ export default function LastfmCard() {
             </div>
             <div className={`${styles.track_info_sub} ${roboto_standard.className}`}>
               <p>{track.artist}</p>
-              <p className={roboto_standard.className}>Played at: {new Date(track.datePlayed).toLocaleString()}</p>
+              {/*<p className={roboto_standard.className}>Played at: {new Date(track.datePlayed).toLocaleString()}</p>*/}
             </div>
             {track.isNowPlaying && <span>Now playing!</span>}
           </div>
