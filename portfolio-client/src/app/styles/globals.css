@@ -3,13 +3,6 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-
-    --foreground: #ededed;
-  }
-}
-
 html, body {
     background: linear-gradient(135deg, #5a6161, #3e404a);
 }
@@ -17,34 +10,20 @@ html, body {
 body {
     color: white;
     font-size: 18px; /*default font size */
-    height: 100vh;
+    /*height: 100vh;*/
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     min-height: 100vh;
-    overflow: scroll;
+    /*overflow: scroll;*/
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-/*@media (prefers-color-scheme: dark) {*/
-/*  html {*/
-/*    color-scheme: dark;*/
-/*  }*/
-/*}*/
-
-.default_card {
-  border: 1px solid #d9d5d4;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
