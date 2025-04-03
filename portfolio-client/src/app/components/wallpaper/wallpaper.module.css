@@ -28,7 +28,7 @@
     width: 45vw;
     height: 45vw;
     background: linear-gradient(240deg, rgba(235, 168, 255, 0.8), rgb(218, 255, 61));
-    bottom: -10%;
+    bottom: 5%;
     right: -5%;
     animation: float-2 18s ease-in-out infinite alternate;
 }
