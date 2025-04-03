@@ -9,7 +9,7 @@ import LastfmCard from "@/app/components/lastfm/lastfm-card";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <img className={styles.background}/>
+      {/*<img className={styles.background}/>*/}
       <main className={styles.main}>
         <IntroCard/>
         <LastfmCard/>
