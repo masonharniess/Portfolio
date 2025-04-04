@@ -1,5 +1,4 @@
 import {useState} from "react";
-import MyButton from "@/app/components/button/button";
 
 export default function MyApp() {
   const [count, setCount] = useState(0);
@@ -11,8 +10,6 @@ export default function MyApp() {
   return (
     <div>
       <h1>Counters that update together</h1>
-      <MyButton count={count} onClick={handleClick} />
-      <MyButton count={count} onClick={handleClick} />
     </div>
   );
 }
