@@ -16,6 +16,13 @@
   grid-row-start: 2;
 }
 
+.dual_column {
+  display: flex;
+  /*flex-direction: column;*/
+  gap: 32px;
+  grid-row-start: 2;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {

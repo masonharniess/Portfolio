@@ -6,7 +6,7 @@ export default function Wallpaper() {
       <div className={`${styles.gradient_sphere} ${styles.sphere_1}`}></div>
       <div className={`${styles.gradient_sphere} ${styles.sphere_2}`}></div>
       <div className={`${styles.gradient_sphere} ${styles.sphere_3}`}></div>
-      <div className={styles.glow}></div>
+      {/*<div className={styles.glow}></div>*/}
       <div className={styles.grid_overlay}></div>
       <div className={styles.noise_overlay}></div>
 

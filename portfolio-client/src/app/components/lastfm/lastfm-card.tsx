@@ -1,6 +1,5 @@
-"use client";
 import {useEffect, useState} from "react";
-import styles from "./lastfm.module.css";
+import styles from "./lastfm-card.module.css";
 import {roboto_bold, roboto_standard} from "@/app/fonts/fonts";
 
 interface LastfmTrack {
@@ -19,8 +18,8 @@ export default function LastfmCard() {
 
   useEffect(() => {
     const fetchUrl =
-      //"http://localhost:5242/api/lastfm/recent/custardflan?limit=5";
-      "https://portfolio-server-hwfnahhbh0hqb2a8.uksouth-01.azurewebsites.net/api/lastfm/recent/custardflan?limit=5";
+      "http://localhost:5242/api/lastfm/recent/custardflan?limit=5";
+      // "https://portfolio-server-hwfnahhbh0hqb2a8.uksouth-01.azurewebsites.net/api/lastfm/recent/custardflan?limit=5";
 
     fetch(fetchUrl)
       .then((res) => res.json())
@@ -44,10 +43,11 @@ export default function LastfmCard() {
               <span className={roboto_bold.className}> {track.album}</span>
             </div>
             <div className={`${styles.track_info_sub} ${roboto_standard.className}`}>
-              <p>{track.artist}</p>
+              <p className={roboto_standard.className}>{track.artist}</p>
+              <p>{track.isNowPlaying && <span>Now playing!</span>}</p>
               {/*<p className={roboto_standard.className}>Played at: {new Date(track.datePlayed).toLocaleString()}</p>*/}
             </div>
-            {track.isNowPlaying && <span>Now playing!</span>}
+
           </div>
         </div>
       ))}

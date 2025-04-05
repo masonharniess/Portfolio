@@ -1,13 +1,13 @@
 .card {
-    backdrop-filter: blur(80px); /* frosted glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle white border */
+    backdrop-filter: blur(80px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 24px;
     border-radius: 30px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     text-align: left;
-    color: #ffffff; /* font colour */
+    color: #ffffff;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
     background: rgba(241, 0, 0, 0.15);
     font-size: 18px;
     display: flex;
@@ -16,18 +16,14 @@
     z-index: 99;
 }
 
-.title_space {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-}
-
 .card_title {
     font-size: 32px;
     opacity: 1;
 }
 
-.card_body {
-    font-size: 18px;
-    line-height: 1.4;
+.job_title {}
+
+.job_dates {
+    color: #EAEAF1B3;
+    font-size: 16px;
 }

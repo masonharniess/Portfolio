@@ -7,7 +7,7 @@ export default function IntroCard() {
       <div className={styles.title_space}>
         <p className={`${styles.card_title} ${roboto_bold.className}`}>Mason Harniess</p>
       </div>
-      <p className={`${styles.card_body} ${roboto_light.className}`}>A First-Class Honours graduate from the University of Leicester. Enthusiastic about computer systems, networks, and programming. Currently working as an IT Support Technician at Keyence, utilising technical skills to support staff and deliver added value through IT projects.</p>
+      <p className={`${styles.card_body} ${roboto_light.className}`}>A First-Class Honours graduate of Computer Science with industry experience in IT. Enthusiastic about computer systems, networks, and programming. Currently working as an IT Support Technician at Keyence, utilising technical skills to support staff and deliver added value through IT projects.</p>
     </div>
   );
 }

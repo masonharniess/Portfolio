@@ -8,6 +8,7 @@
     color: #ffffff; /* font colour */
     margin: 0;
     max-width: 400px;
+    width: 50%;
     background: rgba(241, 0, 0, 0.15);
     font-size: 18px;
     display: flex;
