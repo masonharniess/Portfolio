@@ -6,3 +6,13 @@ export interface LastfmTrack {
   datePlayed: string;
   isNowPlaying: boolean;
 }
+
+// Minimal representation of the raw Last.fm track data
+export interface LastFmRawTrack {
+  name: string;
+  album: { "#text": string };
+  artist: { "#text": string };
+  image: Array<{ size: string; "#text": string }>;
+  date?: { "#text"?: string };
+  "@attr"?: { nowplaying?: string };
+}

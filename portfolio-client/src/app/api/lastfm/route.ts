@@ -16,17 +16,18 @@ export async function GET(request: NextRequest) {
   const lastFmUrl = `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${user}&api_key=${apiKey}&limit=${limit}&format=json`;
 
   try {
-    // Fetch data from Last.fm
     const response = await fetch(lastFmUrl);
     if (!response.ok) {
       throw new Error(`Error fetching Last.fm: ${response.statusText}`);
     }
     const data = await response.json();
-
-    // Return the data as JSON
     return NextResponse.json(data);
-  } catch (error: any) {
-    console.error("Last.fm fetch error:", error);
-    return NextResponse.json({ error: error.message || "Error" }, { status: 500 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error("Last.fm fetch error:", error);
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+    // Fallback for non-Error objects
+    return NextResponse.json({ error: "Unknown error" }, { status: 500 });
   }
 }

@@ -1,6 +1,7 @@
 import { LastfmTrack } from "@/app/types/lastfm-track";
 import styles from "./track-card.module.css";
 import {roboto_bold} from "@/app/fonts/fonts";
+import Image from "next/image";
 
 interface TrackCardProps {
   track: LastfmTrack;
@@ -9,10 +10,12 @@ interface TrackCardProps {
 export default function TrackCard({ track }: TrackCardProps) {
   return (
     <div className={styles.track}>
-      <img
+      <Image
         className={styles.album_cover}
         src={track.albumImage}
         alt={`${track.album} cover`}
+        width={75}
+        height={75}
       />
       <div className={styles.track_info}>
         <div className={`${styles.track_header} ${roboto_bold.className}`}>
