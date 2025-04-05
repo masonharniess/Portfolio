@@ -2,10 +2,10 @@
     backdrop-filter: blur(80px); /* frosted glass effect */
     border: 1px solid rgba(255, 255, 255, 0.3); /* subtle white border */
     padding: 24px;
-    border-radius: 30px;;
+    border-radius: 30px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     text-align: left;
-    color: #ffffff; /* font colour */
+    color: #ffffff;
     margin: 0;
     max-width: 400px;
     width: 50%;
@@ -17,35 +17,6 @@
     z-index: 99;
 }
 
-.lastfm_card_title {
+.title {
     font-size: 32px;
-}
-
-.album_cover {
-    border-radius: 13px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-    width: 75px;
-    height: 75px;
-}
-
-.track {
-    display: flex;
-    gap: 20px;
-    align-items: flex-end;
-}
-
-.track_header {
-    font-size: 18px;
-}
-
-.track_info {
-    margin-bottom: 10px;
-    font-size: 18px;
-
-}
-
-.track_info_sub {
-    color: #EAEAF1B3;
-    font-size: 16px;
 }
