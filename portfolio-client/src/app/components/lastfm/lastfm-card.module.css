@@ -9,6 +9,16 @@
     height: 75px;
     border-radius: 13px;
     background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(-45deg, #FFFFFF33 40%, rgba(255, 255, 255, 0.25) 50%, #FFFFFF33 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+}
+
+@keyframes shimmer {
+    to {
+        background-position-x: 0%
+    }
 }
 
 .skeleton_track:not(:last-child) .skeleton_image {
@@ -24,12 +34,16 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
+
 }
 
 .skeleton_header {
     height: 17px;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(-45deg, #FFFFFF33 40%, rgba(255, 255, 255, 0.25) 50%, #FFFFFF33 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
     width: 40%;
     margin-bottom: 1px;
 }
@@ -37,7 +51,10 @@
 .skeleton_line {
     height: 17px;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(-45deg, #FFFFFF33 40%, rgba(255, 255, 255, 0.25) 50%, #FFFFFF33 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
     margin-bottom: 1px;
 }
 
