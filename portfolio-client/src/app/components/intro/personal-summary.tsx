@@ -10,8 +10,8 @@ export default function PersonalSummary() {
     >
       A First-Class Honours graduate of Computer Science with industry experience
       in IT. Enthusiastic about computer systems, networks, and programming.
-      Currently working as an IT Support Technician at Keyence, utilizing technical
-      skills to support staff and deliver added value through IT projects.
+      Currently employed as a Support Technician at Keyence, leveraging technical skills to provide staff support
+      and enhance operations through IT projects.
     </Card>
   );
 }
