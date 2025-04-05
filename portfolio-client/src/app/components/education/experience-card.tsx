@@ -1,5 +1,5 @@
 import styles from "./experience-card.module.css"
-import {roboto_bold, roboto_light} from "@/app/fonts/fonts";
+import {roboto_bold} from "@/app/fonts/fonts";
 
 export default function ExperienceCard() {
   return (
