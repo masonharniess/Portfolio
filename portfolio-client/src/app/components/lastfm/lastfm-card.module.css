@@ -15,6 +15,10 @@
     margin-bottom: 10px;
 }
 
+.skeleton_track:not(:last-child) .skeleton_line_2 {
+    margin-bottom: 15px;
+}
+
 .skeleton_info {
     flex: 1;
     display: flex;
@@ -43,7 +47,7 @@
 
 .skeleton_line_2 {
     width: 50%;
-    margin-bottom: 2px;
+
 }
 
 .music_list {
