@@ -1,0 +1,15 @@
+.jobs_list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job_item {
+    margin: 0;
+    padding: 0;
+}
+
+.job_item p {
+    margin: 0;
+}

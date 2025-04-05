@@ -7,14 +7,20 @@
 .album_cover {
     border-radius: 13px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
     width: 75px;
     height: 75px;
 }
 
-.track_info {
+.track:not(:last-child) .album_cover {
     margin-bottom: 10px;
+}
+
+.track_info {
     font-size: 18px;
+}
+
+.track:not(:last-child) .track_info {
+    margin-bottom: 10px;
 }
 
 .track_header {

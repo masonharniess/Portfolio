@@ -1,22 +1,54 @@
-.lastfm_card {
-    backdrop-filter: blur(80px); /* frosted glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle white border */
-    padding: 24px;
-    border-radius: 30px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    color: #ffffff;
-    margin: 0;
-    max-width: 400px;
-    width: 50%;
-    background: rgba(241, 0, 0, 0.15);
-    font-size: 18px;
+.skeleton_track {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 99;
+    gap: 20px;
+    align-items: flex-end;
 }
 
-.title {
-    font-size: 32px;
+.skeleton_image {
+    width: 75px;
+    height: 75px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.skeleton_track:not(:last-child) .skeleton_image {
+    margin-bottom: 10px;
+}
+
+.skeleton_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skeleton_header {
+    height: 17px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    width: 40%;
+    margin-bottom: 1px;
+}
+
+.skeleton_line {
+    height: 17px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 1px;
+}
+
+.skeleton_line_1 {
+    width: 25%;
+}
+
+.skeleton_line_2 {
+    width: 50%;
+    margin-bottom: 2px;
+}
+
+.music_list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

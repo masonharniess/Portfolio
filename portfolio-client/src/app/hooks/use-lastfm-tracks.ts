@@ -1,21 +1,29 @@
+// hooks/use-lastfm-tracks.ts
 import { useState, useEffect } from "react";
-import {LastFmRawTrack, LastfmTrack} from "../types/lastfm-track";
+import { LastFmRawTrack, LastfmTrack } from "../types/lastfm-track";
 
-export function useLastfmTracks(user = "custardflan", limit = 3) {
-  const [recentTracks, setRecentTracks] = useState<LastfmTrack[]>([]);
+interface UseLastfmTracksReturn {
+  tracks: LastfmTrack[];
+  loading: boolean;
+}
+
+export function useLastfmTracks(
+  user = "custardflan",
+  limit = 3
+): UseLastfmTracksReturn {
+  const [tracks, setTracks] = useState<LastfmTrack[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchRecentTracks() {
       try {
+        setLoading(true);
         const res = await fetch(`/api/lastfm?user=${user}&limit=${limit}`);
         const data = await res.json();
 
-        const tracks: LastFmRawTrack[] = data?.recenttracks?.track ?? [];
-
-        const mappedTracks = tracks.map((track) => {
-          const isNowPlaying =
-            track["@attr"]?.nowplaying === "true";
-
+        const rawTracks: LastFmRawTrack[] = data?.recenttracks?.track ?? [];
+        const mapped = rawTracks.map((track) => {
+          const isNowPlaying = track["@attr"]?.nowplaying === "true";
           return {
             track: track.name,
             album: track.album["#text"],
@@ -29,14 +37,16 @@ export function useLastfmTracks(user = "custardflan", limit = 3) {
           } as LastfmTrack;
         });
 
-        setRecentTracks(mappedTracks);
+        setTracks(mapped);
       } catch (error) {
         console.error("Error fetching Last.fm data:", error);
+      } finally {
+        setLoading(false);
       }
     }
 
     fetchRecentTracks().catch((err) => console.error(err));
   }, [user, limit]);
 
-  return recentTracks;
+  return { tracks, loading };
 }
