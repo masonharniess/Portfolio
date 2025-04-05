@@ -1,16 +1,23 @@
-import styles from "./experience-card.module.css"
+import Card from "@/app/components/card/card";
 import {roboto_bold} from "@/app/fonts/fonts";
 
 export default function ExperienceCard() {
   return (
-    <div className={styles.card}>
-      <div className={styles.title_space}>
-        <p className={`${styles.card_title} ${roboto_bold.className}`}>Work Experience</p>
-      </div>
-      <div className={`${styles.card_body} ${roboto_bold.className}`}>
-        <p className={styles.job_title}>IT Support Technician</p>
-        <p className={styles.job_dates}>Aug. 2024—Present</p>
-      </div>
-    </div>
-  )
+    <Card
+      title="Work Experience"
+      titleClassName={roboto_bold.className}
+      bodyClassName={roboto_bold.className}
+    >
+      <p>IT Support Technician</p>
+      <p style={{color: "#EAEAF1B3", fontSize: 16}}>Aug. 2024—Present</p>
+      <p>Teaching Assistant & Marker</p>
+      <p style={{color: "#EAEAF1B3", fontSize: 16}}>Feb. 2024—March 2024</p>
+      <p>Customer Service Assistant & Machine Operative</p>
+      <p style={{color: "#EAEAF1B3", fontSize: 16}}>July 2022–Oct. 2022</p>
+      <p>Assistant Solicitor & Administrative Assistant </p>
+      <p style={{color: "#EAEAF1B3", fontSize: 16}}>Dec. 2019</p>
+      <p>Kitchen Porter</p>
+      <p style={{color: "#EAEAF1B3", fontSize: 16}}>June 2019–Sep. 2019</p>
+    </Card>
+  );
 }

@@ -10,6 +10,8 @@
 }
 
 .content {
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -18,9 +20,8 @@
 
 .dual_column {
   display: flex;
-  /*flex-direction: column;*/
-  gap: 32px;
-  grid-row-start: 2;
+  gap: 32px; /* space between the two cards */
+
 }
 
 /* Enable hover only on non-touch devices */

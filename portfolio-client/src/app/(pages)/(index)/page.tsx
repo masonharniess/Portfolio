@@ -1,6 +1,6 @@
 "use client"
 import styles from "./page.module.css";
-import IntroCard from "@/app/components/intro/intro-card";
+import PersonalSummary from "@/app/components/intro/personal-summary";
 import LastfmCard from "@/app/components/lastfm/lastfm-card";
 import Wallpaper from "@/app/components/wallpaper/wallpaper";
 import Particles from "@/app/components/particles/particles";
@@ -12,7 +12,7 @@ export default function Home() {
       <Wallpaper />
       <Particles />
       <main className={styles.content}>
-        <IntroCard/>
+        <PersonalSummary/>
         <div className={styles.dual_column}>
           <ExperienceCard/>
           <LastfmCard/>
