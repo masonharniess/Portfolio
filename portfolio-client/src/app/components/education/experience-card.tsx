@@ -21,19 +21,19 @@ export default function ExperienceCard() {
         </div>
 
         <div className={styles.job_item}>
-          <p>Customer Service Assistant & Machine Operative</p>
+          <p>Customer Service & Machine Operative</p>
           <p style={{color: "#EAEAF1B3", fontSize: 16}}>Hirst Amusements, July–Oct. 2022</p>
         </div>
 
         <div className={styles.job_item}>
-          <p>Assistant Solicitor & Administrative Assistant </p>
+          <p>Administrative Assistant </p>
           <p style={{color: "#EAEAF1B3", fontSize: 16}}></p>
           <p style={{color: "#EAEAF1B3", fontSize: 16}}>Oakwood Solicitors, Dec. 2019</p>
         </div>
 
         <div className={styles.job_item}>
           <p>Kitchen Porter</p>
-          <p style={{color: "#EAEAF1B3", fontSize: 16}}>June 2019–Sep. 2019</p>
+          <p style={{color: "#EAEAF1B3", fontSize: 16}}>Cucina Café & Restaurant, June–Sep. 2019</p>
         </div>
       </div>
 

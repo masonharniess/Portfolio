@@ -1,5 +1,8 @@
 import Card from "@/app/components/card/card";
 import { roboto_bold, roboto_light } from "@/app/fonts/fonts";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import IconButton from "@/app/components/button/button";
 
 export default function PersonalSummary() {
   return (
@@ -7,11 +10,34 @@ export default function PersonalSummary() {
       title="Mason Harniess"
       titleClassName={roboto_bold.className}
       bodyClassName={roboto_light.className}
+      icons={
+        <>
+          <IconButton
+            href="mailto:contact@masonharniess.com"
+            icon={faEnvelope}
+            alt="Email me"
+            target="_blank"
+          />
+          <IconButton
+            href="https://github.com/masonharniess"
+            icon={faGithub}
+            alt="GitHub"
+            target="_blank"
+          />
+          <IconButton
+            href="https://www.linkedin.com/in/masonharniess/"
+            icon={faLinkedin}
+            alt="LinkedIn"
+            target="_blank"
+          />
+        </>
+      }
     >
       A First-Class Honours graduate of Computer Science with industry experience
       in IT. Enthusiastic about computer systems, networks, and programming.
-      Currently employed as a Support Technician at Keyence, leveraging technical skills to provide staff support
-      and enhance operations through IT projects.
+      Currently employed as a Support Technician at Keyence, leveraging
+      technical skills to provide staff support and enhance operations
+      through IT projects.
     </Card>
   );
 }

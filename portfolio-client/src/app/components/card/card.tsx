@@ -1,24 +1,31 @@
 import { ReactNode } from "react";
 import styles from "./card.module.css";
 
-// Optional props styling to override the default if needed
 interface CardProps {
-  title?: string;
+  title?: string | ReactNode;
   titleClassName?: string;
   bodyClassName?: string;
+  icons?: ReactNode;
   children?: ReactNode;
 }
 
-export default function Card({title, titleClassName, bodyClassName, children}: CardProps) {
+export default function Card({
+                               title,
+                               titleClassName,
+                               bodyClassName,
+                               icons,
+                               children,
+                             }: CardProps) {
   return (
     <div className={styles.card}>
-      {/* Render the title only if provided */}
       {title && (
-        <p className={`${styles.card_title} ${titleClassName || ""}`}>
-          {title}
-        </p>
+        <div className={styles.card_header}>
+          <p className={`${styles.card_title} ${titleClassName || ""}`}>
+            {title}
+          </p>
+          {icons && <div className={styles.icon_list}>{icons}</div>}
+        </div>
       )}
-      {/* The rest of the content goes here */}
       <div className={`${styles.card_body} ${bodyClassName || ""}`}>
         {children}
       </div>
