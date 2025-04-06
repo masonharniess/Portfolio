@@ -1,16 +1,7 @@
-// hooks/use-lastfm-tracks.ts
 import { useState, useEffect } from "react";
 import { LastFmRawTrack, LastfmTrack } from "../types/lastfm-track";
 
-interface UseLastfmTracksReturn {
-  tracks: LastfmTrack[];
-  loading: boolean;
-}
-
-export function useLastfmTracks(
-  user = "custardflan",
-  limit = 3
-): UseLastfmTracksReturn {
+export function useLastfmTracks(user = "custardflan", limit = 3) {
   const [tracks, setTracks] = useState<LastfmTrack[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -22,17 +13,21 @@ export function useLastfmTracks(
         const data = await res.json();
 
         const rawTracks: LastFmRawTrack[] = data?.recenttracks?.track ?? [];
-        const mapped = rawTracks.map((track) => {
-          const isNowPlaying = track["@attr"]?.nowplaying === "true";
+
+        const mapped = rawTracks.map((raw) => {
+          const isNowPlaying = raw["@attr"]?.nowplaying === "true";
+
+          const utsValue = raw.date?.uts ? Number(raw.date.uts) : 0;
+
           return {
-            track: track.name,
-            album: track.album["#text"],
+            track: raw.name,
+            album: raw.album["#text"],
             albumImage:
-              track.image.find((img) => img.size === "extralarge")?.["#text"] ||
-              track.image[0]?.["#text"] ||
+              raw.image.find((img) => img.size === "extralarge")?.["#text"] ||
+              raw.image[0]?.["#text"] ||
               "",
-            artist: track.artist["#text"],
-            datePlayed: track.date?.["#text"] || "",
+            artist: raw.artist["#text"],
+            dateUts: utsValue,
             isNowPlaying,
           } as LastfmTrack;
         });

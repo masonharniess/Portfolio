@@ -11,15 +11,19 @@ export default function TrackCard({ track }: TrackCardProps) {
   let dateDisplay = "";
   if (track.isNowPlaying) {
     dateDisplay = "Currently playing...";
-  } else {
-    const [datePart, timePart] = track.datePlayed.split(",");
-    if (datePart && timePart) {
-      const timeStr = timePart.trim();     // "16:07"
-      const dateStr = datePart.trim();     // "05 Apr 2025"
-      dateDisplay = `${timeStr}, ${dateStr}`;
-    } else {
-      dateDisplay = track.datePlayed;
-    }
+  } else if (track.dateUts > 0) {
+    const dateObj = new Date(track.dateUts * 1000);
+    const timeStr = dateObj.toLocaleTimeString("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+    const dateStr = dateObj.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+
+    dateDisplay = `${timeStr}, ${dateStr}`;
   }
 
   return (

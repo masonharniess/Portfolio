@@ -1,4 +1,3 @@
-// components/lastfm/LastfmCard.tsx
 import { useLastfmTracks } from "@/app/hooks/use-lastfm-tracks";
 import TrackCard from "@/app/components/lastfm/track/track-card";
 import Card from "@/app/components/card/card";

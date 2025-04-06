@@ -36,7 +36,6 @@ export default function PersonalSummary() {
             alt="Flickr"
             target="_blank"
           />
-
         </>
       }
     >
