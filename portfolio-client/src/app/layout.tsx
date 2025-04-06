@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Mason Harniess",
-  description: "A portfolio of work.",
+  description: "Portfolio",
 };
 
 export default function RootLayout({

@@ -24,6 +24,7 @@ export default function Card({
             {title}
           </p>
           {icons && <div className={styles.icon_list}>{icons}</div>}
+
         </div>
       )}
       <div className={`${styles.card_body} ${bodyClassName || ""}`}>

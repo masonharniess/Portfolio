@@ -1,6 +1,6 @@
 import Card from "@/app/components/card/card";
 import { roboto_bold, roboto_light } from "@/app/fonts/fonts";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import IconButton from "@/app/components/button/button";
 
@@ -26,10 +26,11 @@ export default function PersonalSummary() {
           />
           <IconButton
             href="https://www.linkedin.com/in/masonharniess/"
-            icon={faLinkedin}
+            icon={faLinkedinIn}
             alt="LinkedIn"
             target="_blank"
           />
+
         </>
       }
     >
