@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -25,9 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
+      <GoogleAnalytics gaId="G-89H21W1X98"/>
     </html>
   );
 }
