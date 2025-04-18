@@ -9,7 +9,7 @@ export default function EducationCard() {
       title="Education"
       titleClassName={roboto_bold.className}
       bodyClassName={roboto_bold.className}
-      subheading={"Hey!"}
+      // subheading={"Hey!"}
       subheadingClassName={roboto_bold.className}
     >
       <div className={styles.education_list}>
