@@ -2,7 +2,7 @@ import Card from "@/app/components/card/card";
 import { roboto_bold, roboto_light } from "@/app/fonts/fonts";
 import {faFlickr, faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import IconButton from "@/app/components/button/button";
+import IconButton from "@/app/components/button/icon-buttons/icon-button";
 
 export default function PersonalSummary() {
   return (

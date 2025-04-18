@@ -22,6 +22,40 @@
     margin-bottom: 8px;
 }
 
+.header_left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.card_title {
+    font-size: 32px;
+    margin: 0;
+}
+
+.subheading {
+    font-size: 15px;
+    color: #EAEAF1B3;
+    margin: 0;
+}
+
+.subheading a {
+    display: inline-block;
+    font-size: 15px;
+    color: #EAEAF1B3;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: left center;
+    text-decoration: none;
+}
+
+.subheading a:hover {
+    transform: scale(0.97);
+}
+
+.subheading a:active {
+    transform: scale(0.95);
+}
+
 .card_title {
     font-size: 32px;
     margin: 0;

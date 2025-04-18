@@ -1,8 +1,13 @@
 import { useLastfmTracks } from "@/app/hooks/use-lastfm-tracks";
 import TrackCard from "@/app/components/lastfm/track/track-card";
 import Card from "@/app/components/card/card";
-import { roboto_bold } from "@/app/fonts/fonts";
+import {roboto_bold} from "@/app/fonts/fonts";
 import styles from "./lastfm-card.module.css";
+
+import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
+
+import React from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function SkeletonTrackCard() {
   return (
@@ -24,17 +29,21 @@ export default function LastfmCard() {
     <Card
       title="Recently Played Songs"
       titleClassName={roboto_bold.className}
+      subheading={
+        <a href={"https://www.last.fm/api"} target={"_blank"}>Built with Lastfm API <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/></a>
+      }
+      subheadingClassName={roboto_bold.className}
     >
       <div className={styles.music_list}>
         {loading ? (
           <>
-            <SkeletonTrackCard />
-            <SkeletonTrackCard />
-            <SkeletonTrackCard />
+            <SkeletonTrackCard/>
+            <SkeletonTrackCard/>
+            <SkeletonTrackCard/>
           </>
         ) : (
           tracks.map((track, index) => (
-            <TrackCard key={index} track={track} />
+            <TrackCard key={index} track={track}/>
           ))
         )}
       </div>
