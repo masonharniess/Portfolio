@@ -16,7 +16,7 @@
   grid-row-start: 2;
   padding: 20px;
   z-index: 10;
-  height: 95dvh;
+  /*height: 95dvh;*/
   overflow-y: scroll;
 
   /* Remove scrollbar from Firefox & Edge browsers*/
@@ -32,6 +32,12 @@
 @media (max-width: 600px) {
   .dual_column {
     flex-direction: column;
+  }
+}
+
+@media (max-height: 1070px) {
+  .content {
+    height: 95dvh;
   }
 }
 
