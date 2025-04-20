@@ -7,12 +7,20 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "lastfm.freetls.fastly.net",
-        // or pathname: "**" if you want all paths
         port: "",
         pathname: "/i/u/**",
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/home',
+        permanent: true
+      }
+    ];
+  }
 };
 
 export default nextConfig;
