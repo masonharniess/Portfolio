@@ -23,6 +23,12 @@
   grid-row-start: 2;
   padding: 20px;
   z-index: 10;
+  height: 95vh;
+  overflow-y: scroll;
+
+  /* Remove scrollbar from Firefox & Edge browsers*/
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
 }
 
 .dual_column {
