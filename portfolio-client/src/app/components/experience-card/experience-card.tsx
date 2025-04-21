@@ -1,10 +1,10 @@
-import Card from "@/app/components/card/card";
+import DefaultCard from "@/app/components/default-card/default-card";
 import {roboto_bold} from "@/app/fonts/fonts";
 import styles from "./experience-card.module.css";
 
 export default function ExperienceCard() {
   return (
-    <Card
+    <DefaultCard
       title="Work Experience"
       titleClassName={roboto_bold.className}
       bodyClassName={roboto_bold.className}
@@ -37,6 +37,6 @@ export default function ExperienceCard() {
         </div>
       </div>
 
-    </Card>
+    </DefaultCard>
   );
 }

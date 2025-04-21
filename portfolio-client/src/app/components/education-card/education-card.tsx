@@ -1,11 +1,11 @@
-import Card from "@/app/components/card/card";
+import DefaultCard from "@/app/components/default-card/default-card";
 import {roboto_bold} from "@/app/fonts/fonts";
 import styles from "./education-card.module.css";
 import React from "react";
 
 export default function EducationCard() {
   return (
-    <Card
+    <DefaultCard
       title="Education"
       titleClassName={roboto_bold.className}
       bodyClassName={roboto_bold.className}
@@ -28,6 +28,6 @@ export default function EducationCard() {
           <p style={{color: "#EAEAF1B3", fontSize: 16}}>Bruntcliffe Academy</p>
         </div>
       </div>
-    </Card>
+    </DefaultCard>
   );
 }

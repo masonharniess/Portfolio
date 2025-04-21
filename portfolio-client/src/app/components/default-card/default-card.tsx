@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./card.module.css";
+import styles from "./default-card.module.css";
 
 interface CardProps {
   title?: string | ReactNode;
@@ -11,7 +11,7 @@ interface CardProps {
   children?: ReactNode;
 }
 
-export default function Card({
+export default function DefaultCard({
                                title,
                                subheading,
                                titleClassName,

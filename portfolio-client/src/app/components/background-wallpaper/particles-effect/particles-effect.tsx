@@ -1,8 +1,8 @@
 "use client";
-import styles from "./particles.module.css";
+import styles from "./particles-effect.module.css";
 import { useEffect, useRef } from "react";
 
-const Particles = () => {
+const ParticlesEffect = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -101,4 +101,4 @@ const Particles = () => {
   return <div className={styles.particles_container} ref={containerRef} />;
 };
 
-export default Particles;
+export default ParticlesEffect;

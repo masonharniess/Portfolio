@@ -1,12 +1,12 @@
-import Card from "@/app/components/card/card";
+import DefaultCard from "@/app/components/default-card/default-card";
 import { roboto_bold, roboto_light } from "@/app/fonts/fonts";
 import {faFlickr, faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import IconButton from "@/app/components/button/icon-buttons/icon-button";
+import IconButton from "@/app/components/button/icon-button/icon-button";
 
-export default function PersonalSummary() {
+export default function IntroductionCard() {
   return (
-    <Card
+    <DefaultCard
       title="Mason Harniess"
       titleClassName={roboto_bold.className}
       bodyClassName={roboto_light.className}
@@ -44,6 +44,6 @@ export default function PersonalSummary() {
       Currently employed as a Support Technician at Keyence, leveraging
       technical skills to provide staff support and enhance operations
       through IT projects.
-    </Card>
+    </DefaultCard>
   );
 }

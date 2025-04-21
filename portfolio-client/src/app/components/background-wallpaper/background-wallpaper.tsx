@@ -1,6 +1,6 @@
-import styles from "./wallpaper.module.css"
+import styles from "./background-wallpaper.module.css"
 
-export default function Wallpaper() {
+export default function BackgroundWallpaper() {
   return (
     <div className={styles.gradient_background}>
       <div className={`${styles.gradient_sphere} ${styles.sphere_1}`}></div>

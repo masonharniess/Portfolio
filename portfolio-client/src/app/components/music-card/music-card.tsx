@@ -1,8 +1,8 @@
 import { useLastfmTracks } from "@/app/hooks/use-lastfm-tracks";
-import TrackCard from "@/app/components/lastfm/track/track-card";
-import Card from "@/app/components/card/card";
+import TrackCard from "@/app/components/music-card/tracks/track-card";
+import DefaultCard from "@/app/components/default-card/default-card";
 import {roboto_bold} from "@/app/fonts/fonts";
-import styles from "./lastfm-card.module.css";
+import styles from "./music-card.module.css";
 
 import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 
@@ -22,11 +22,11 @@ function SkeletonTrackCard() {
   );
 }
 
-export default function LastfmCard() {
+export default function MusicCard() {
   const { tracks, loading } = useLastfmTracks("custardflan", 3);
 
   return (
-    <Card
+    <DefaultCard
       title="Recently Played Songs"
       titleClassName={roboto_bold.className}
       subheading={
@@ -47,6 +47,6 @@ export default function LastfmCard() {
           ))
         )}
       </div>
-    </Card>
+    </DefaultCard>
   );
 }
