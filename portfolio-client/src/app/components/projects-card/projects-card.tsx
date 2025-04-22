@@ -75,7 +75,7 @@ export default function ProjectCard() {
             </p>
           </div>
           <p className={roboto_bold.className} style={{color: "#EAEAF1B3", fontSize: 16}}>
-            – Developed a text-based adventure game with command-line user interaction..
+            – Developed a text-based adventure game with command-line user interaction.
           </p>
           <p className={roboto_bold.className} style={{color: "#EAEAF1B3", fontSize: 16}}>
             – Technologies: C++
