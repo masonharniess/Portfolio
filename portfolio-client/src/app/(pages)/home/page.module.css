@@ -12,7 +12,7 @@
   margin: 10px auto 10px auto;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
   grid-row-start: 2;
   padding: 20px;
   z-index: 10;
@@ -26,7 +26,7 @@
 
 .dual_column {
   display: flex;
-  gap: 32px;
+  gap: 20px;
 }
 
 @media (max-width: 600px) {
@@ -38,6 +38,11 @@
 @media (max-height: 1070px) {
   .content {
     height: 95dvh;
+    gap: 10px;
+  }
+
+  .dual_column {
+    gap: 10px;
   }
 }
 

@@ -1,0 +1,52 @@
+.project_list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project_item {
+    margin: 0;
+    padding: 0;
+}
+
+.project_title_space {
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+    /*flex-direction: column;*/
+    /*align-items: baseline;*/
+}
+
+.divider {
+    height: 14px;
+    width: 1px;
+    background: #EAEAF1B3;
+    margin-top: 1px;
+}
+
+.project_technologies {
+    /*color: #EAEAF1B3;*/
+    font-size: 16px;
+    text-align: right;
+}
+
+.project_item p {
+    margin: 0;
+}
+
+.project_item p a {
+    display: inline-block;
+    text-decoration: none;
+    color: #EAEAF1B3;
+    transition: transform 0.15s ease-in-out;
+
+}
+
+.project_item p a:hover {
+    transform: scale(0.97);
+}
+
+.project_item p a:hover{
+    transform: scale(0.95);
+}

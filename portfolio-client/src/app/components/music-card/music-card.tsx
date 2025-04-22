@@ -3,10 +3,9 @@ import TrackCard from "@/app/components/music-card/tracks/track-card";
 import DefaultCard from "@/app/components/default-card/default-card";
 import {roboto_bold} from "@/app/fonts/fonts";
 import styles from "./music-card.module.css";
-
 import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 
-import React from "react";
+// import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function SkeletonTrackCard() {

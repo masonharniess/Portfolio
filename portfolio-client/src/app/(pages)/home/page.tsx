@@ -6,6 +6,7 @@ import BackgroundWallpaper from "@/app/components/background-wallpaper/backgroun
 import ParticlesEffect from "@/app/components/background-wallpaper/particles-effect/particles-effect";
 import EducationCard from "@/app/components/education-card/education-card";
 import ExperienceCard from "@/app/components/experience-card/experience-card";
+import ProjectCard from "@/app/components/projects-card/projects-card";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <ExperienceCard/>
           <EducationCard/>
         </div>
+        <ProjectCard/>
         <MusicCard/>
       </main>
     </div>
