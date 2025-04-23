@@ -1,8 +1,8 @@
 import DefaultCard from "@/app/components/default-card/default-card";
 import styles from "./projects-card.module.css"
 import {roboto_bold, roboto_light, roboto_standard} from "@/app/fonts/fonts";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
+// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+// import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 
 export default function ProjectCard() {
   return (
