@@ -42,7 +42,7 @@ export default function TrackCard({ track }: TrackCardProps) {
 
         <div className={`${styles.track_info_sub} ${roboto_bold.className}`}>
           <p>{track.artist}</p>
-          <p className={roboto_light.className}>{dateDisplay}</p>
+          <p style={{fontSize: 15}} className={roboto_light.className}>{dateDisplay}</p>
         </div>
       </div>
     </div>
