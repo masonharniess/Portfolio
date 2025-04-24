@@ -1,89 +1,74 @@
 import DefaultCard from "@/app/components/default-card/default-card";
-import styles from "./projects-card.module.css"
-import {roboto_bold, roboto_light} from "@/app/fonts/fonts";
-// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-// import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
+import styles from "./projects-card.module.css";
+import { roboto_bold} from "@/app/fonts/fonts";
+import Link from "next/link";
+import {faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
+interface Project {
+  title: string;
+  description: string;
+  href: string;
+}
+
+const projects: Project[] = [
+  {
+    title: "Portfolio",
+    description: "Static website built with Next.js.",
+    href: "https://github.com/masonharniess/Portfolio",
+  },
+  {
+    title: "Task Manager",
+    description: "Full‑stack to-do list web application",
+    href: "https://github.com/masonharniess/Swift-Task-Manager",
+  },
+  {
+    title: "CLI Text Adventure",
+    description: "A branching path CLI game written in C++.",
+    href: "https://github.com/masonharniess/Swift-Task-Manager",
+  },
+  // {
+  //   title: "Fourth Project",
+  //   description: "Short description.",
+  //   href: "",
+  // },
+];
 
 export default function ProjectCard() {
   return (
     <DefaultCard
       title="Projects"
       titleClassName={roboto_bold.className}
-      // subheading={
-      //   <a href={"https://www.masonharniess.com/projects"} target={"_blank"}>See full project list</a>
-      // }
-      // subheadingClassName={roboto_bold.className}
+      subheading={
+        <a
+          href="https://www.masonharniess.com/projects"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          &nbsp;&nbsp;Projects Page&nbsp;<FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/>
+        </a>
+      }
+      subheadingClassName={roboto_bold.className}
       bodyClassName={roboto_bold.className}
     >
-      <div className={styles.project_list}>
-        <div className={styles.project_item}>
-          <div className={styles.project_title_space}>
-            <p style={{fontSize: 18}}>
-              Portfolio (Static Website)
-            </p>
-            {/*<div className={styles.divider}></div>*/}
-            <p className={`${styles.project_technologies} ${roboto_light.className}`}>
-              Dec. 2024–Present
-            </p>
+      <div className={styles.grid}>
+        {projects.map((project) => (
+          <div key={project.title} className={styles.project_card}>
+            <h3 className={styles.project_title}>{project.title}</h3>
+            <p className={styles.project_description}>{project.description}</p>
+            <Link
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.project_link}
+              style={{color: "#7dc2ff"}}
+            >
+              View Project&nbsp;
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/>
+            </Link>
           </div>
-          <p className={roboto_light.className} style={{color: "#EAEAF1B3", fontSize: 16}}>– Developed a portfolio
-            website (this site) as a hobby project.
-          </p>
-          {/*<p className={roboto_standard.className} style={{color: "#EAEAF1B3", fontSize: 16}}>*/}
-          {/*  – Design inspired by&nbsp;*/}
-          {/*  <a className={styles.links}*/}
-          {/*     href={"https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos"}*/}
-          {/*     target={"_blank"}>*/}
-          {/*    VisionOS&nbsp;*/}
-          {/*    <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/>*/}
-          {/*  </a>*/}
-          {/*</p>*/}
-          <p className={roboto_light.className} style={{color: "#EAEAF1B3", fontSize: 16}}>– Technologies: Next.js,
-            React, TypeScript, HTML, CSS.</p>
-
-        </div>
-        <div className={styles.project_item}>
-          <div className={styles.project_title_space}>
-            <p style={{fontSize: 18}}>
-              Swift Task Manager (Web Application)
-            </p>
-            {/*<div className={styles.divider}></div>*/}
-            <p className={`${styles.project_technologies} ${roboto_light.className}`}>
-              Jan. 2024–May 2024
-            </p>
-          </div>
-          <p className={roboto_light.className} style={{color: "#EAEAF1B3", fontSize: 16}}>
-            – Developed a full-stack web application for users to manage their daily workflow and improve productivity.
-          </p>
-          <p className={roboto_light.className} style={{color: "#EAEAF1B3", fontSize: 16}}>
-            – Final year university project.
-          </p>
-          <p className={roboto_light.className} style={{color: "#EAEAF1B3", fontSize: 16}}>
-            – Technologies: ASP.NET Core, C#, Next.js, React, TypeScript, HTML, CSS
-          </p>
-
-        </div>
-
-        <div className={styles.project_item}>
-          <div className={styles.project_title_space}>
-            <p style={{fontSize: 18}}>
-              Text Adventure (Command-Line Game)
-            </p>
-            {/*<div className={styles.divider}></div>*/}
-            <p className={`${styles.project_technologies} ${roboto_light.className}`}>
-              Dec. 2023
-            </p>
-          </div>
-          <p className={roboto_light.className} style={{color: "#EAEAF1B3", fontSize: 16}}>
-            – Developed a text-based adventure game with command-line user interaction.
-          </p>
-          <p className={roboto_light.className} style={{color: "#EAEAF1B3", fontSize: 16}}>
-            – Technologies: C++
-          </p>
-
-        </div>
+        ))}
       </div>
-
     </DefaultCard>
-  )
+  );
 }

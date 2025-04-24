@@ -37,7 +37,7 @@
 
 @media (max-height: 1070px) {
   .content {
-    height: 95dvh;
+    /*height: 95dvh;*/
     gap: 10px;
   }
 
@@ -50,6 +50,10 @@
   .page {
     padding: 10px;
     /*padding-bottom: 32px;*/
+  }
+
+  .content {
+    padding: 10px;
   }
 
   .main {
