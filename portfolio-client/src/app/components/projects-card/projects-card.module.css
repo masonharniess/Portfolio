@@ -7,7 +7,7 @@
 }
 
 .project_card {
-  backdrop-filter: blur(60px);
+  /*backdrop-filter: blur(60px);*/
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
