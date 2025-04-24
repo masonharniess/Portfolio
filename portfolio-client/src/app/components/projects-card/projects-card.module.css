@@ -35,6 +35,7 @@
   text-decoration: none;
   margin-top: auto;
   transition: transform 0.15s ease-in-out;
+  width: fit-content;
 }
 
 .project_link:hover {
