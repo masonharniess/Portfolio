@@ -6,13 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faCode, faMusic } from "@fortawesome/free-solid-svg-icons";
 import styles from "./nav-bar.module.css";
 import {roboto_standard} from "@/app/fonts/fonts";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 interface NavLink {
   href: string;
-  icon: any;
+  icon: IconDefinition;
   label: string;
 }
-
 const links: NavLink[] = [
   { href: "/home", icon: faHouse, label: "Home" },
   { href: "https://github.com/masonharniess?tab=repositories", icon: faCode, label: "Projects" },
