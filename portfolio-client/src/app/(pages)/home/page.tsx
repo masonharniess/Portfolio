@@ -7,21 +7,25 @@ import ParticlesEffect from "@/app/components/background-wallpaper/particles-eff
 // import EducationCard from "@/app/components/education-card/education-card";
 // import ExperienceCard from "@/app/components/experience-card/experience-card";
 import ProjectCard from "@/app/components/projects-card/projects-card";
+import NavBar from "@/app/components/nav-bar/nav-bar";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <BackgroundWallpaper />
       <ParticlesEffect />
-      <main className={styles.content}>
-        <IntroductionCard/>
-        {/*<div className={styles.dual_column}>*/}
-        {/*  <ExperienceCard/>*/}
-        {/*  <EducationCard/>*/}
-        {/*</div>*/}
-        <ProjectCard/>
-        {/*<MusicCard/>*/}
-      </main>
+      <div className={styles.content_wrapper}>
+        <NavBar/>
+        <main className={styles.content}>
+          <IntroductionCard/>
+          {/*<div className={styles.dual_column}>*/}
+          {/*  <ExperienceCard/>*/}
+          {/*  <EducationCard/>*/}
+          {/*</div>*/}
+          <ProjectCard/>
+          {/*<MusicCard/>*/}
+        </main>
+      </div>
     </div>
   );
 }
