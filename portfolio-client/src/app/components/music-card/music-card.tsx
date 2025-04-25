@@ -29,7 +29,7 @@ export default function MusicCard() {
       title="Recently Played Songs"
       titleClassName={roboto_bold.className}
       subheading={
-        <a href={"https://www.last.fm/api"} target={"_blank"}>&nbsp;&nbsp;Built with Lastfm API <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/></a>
+        <a href={"https://www.last.fm/api"} target={"_blank"}>Built with Lastfm API <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/></a>
       }
       subheadingClassName={roboto_bold.className}
     >

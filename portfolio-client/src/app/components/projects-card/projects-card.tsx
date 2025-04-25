@@ -39,15 +39,15 @@ export default function ProjectCard() {
     <DefaultCard
       title="Projects"
       titleClassName={roboto_bold.className}
-      subheading={
-        <a
-          href="https://www.masonharniess.com/projects"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          &nbsp;&nbsp;Projects Page&nbsp;<FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/>
-        </a>
-      }
+      // subheading={
+      //   <a
+      //     href="https://www.masonharniess.com/projects"
+      //     target="_blank"
+      //     rel="noopener noreferrer"
+      //   >
+      //     Projects Page&nbsp;<FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/>
+      //   </a>
+      // }
       subheadingClassName={roboto_bold.className}
       bodyClassName={roboto_bold.className}
     >
