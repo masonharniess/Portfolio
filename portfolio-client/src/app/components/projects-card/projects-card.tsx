@@ -37,7 +37,7 @@ const projects: Project[] = [
 export default function ProjectCard() {
   return (
     <DefaultCard
-      title="Projects"
+      title="Recent Projects"
       titleClassName={roboto_bold.className}
       // subheading={
       //   <a
@@ -63,7 +63,7 @@ export default function ProjectCard() {
               className={styles.project_link}
               style={{color: "#7dc2ff"}}
             >
-              View Project&nbsp;
+              View codebase&nbsp;
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/>
             </Link>
           </div>
