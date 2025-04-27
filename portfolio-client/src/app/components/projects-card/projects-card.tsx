@@ -19,7 +19,7 @@ const projects: Project[] = [
   },
   {
     title: "Task Manager",
-    description: "Full‑stack web app built with Next.js & ASP.NET Core.",
+    description: "Full‑stack web app built with ASP.NET Core & Next.js.",
     href: "https://github.com/masonharniess/Swift-Task-Manager",
   },
   {
