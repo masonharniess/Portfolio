@@ -25,7 +25,7 @@ const projects: Project[] = [
   {
     title: "CLI Text Adventure",
     description: "A branching path CLI game written in C++.",
-    href: "https://github.com/masonharniess/Swift-Task-Manager",
+    href: "https://github.com/masonharniess/Text-Adventure-Game",
   },
   // {
   //   title: "Fourth Project",
