@@ -69,6 +69,18 @@ export default function ProjectCard() {
           </div>
         ))}
       </div>
+      <div className={styles.see_more_parent}>
+        <Link
+            href="https://github.com/masonharniess?tab=repositories&q=&type=public&language=&sort="
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.see_more}
+            style={{color: "#EAEAF1B3"}}
+        >
+          More projects on GitHub&nbsp;
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/>
+        </Link>
+      </div>
     </DefaultCard>
   );
 }

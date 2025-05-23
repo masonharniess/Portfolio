@@ -51,3 +51,27 @@
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+
+.see_more_parent {
+  justify-content: center;
+  align-content: center;
+  /*width: 100%;*/
+  display: flex;
+}
+
+.see_more {
+  font-size: 15px;
+  color: #EAEAF1B3;
+  text-decoration: none;
+  margin: 20px 0 0 0;
+  /*vertical-align: bottom;*/
+  transition: transform 0.15s ease-in-out;
+  /*width: fit-content;*/
+  /*justify-content: center;*/
+  /*align-content: center;*/
+  width: fit-content;
+}
+
+.see_more:hover {
+  transform: scale(0.95);
+}
