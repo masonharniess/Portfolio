@@ -19,7 +19,7 @@ const projects: Project[] = [
   },
   {
     title: "Task Manager",
-    description: "Full‑stack web app built with ASP.NET Core & Next.js.",
+    description: "Full‑stack web app built with ASP.NET Core, SQLite & Next.js.",
     href: "https://github.com/masonharniess/Swift-Task-Manager",
   },
   {
@@ -27,11 +27,11 @@ const projects: Project[] = [
     description: "A branching path CLI game written in C++.",
     href: "https://github.com/masonharniess/Text-Adventure-Game",
   },
-  // {
-  //   title: "Fourth Project",
-  //   description: "Short description.",
-  //   href: "",
-  // },
+  {
+    title: "General Election Voting System",
+    description: "Full-stack web app built with ASP.NET Core, SQLite & Next.js",
+    href: "https://github.com/masonharniess/General-Election-Voting-System",
+  },
 ];
 
 export default function ProjectCard() {

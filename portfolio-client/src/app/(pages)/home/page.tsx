@@ -8,6 +8,7 @@ import ParticlesEffect from "@/app/components/background-wallpaper/particles-eff
 import ProjectCard from "@/app/components/projects-card/projects-card";
 // import NavBar from "@/app/components/nav-bar/nav-bar";
 import MusicCard from "@/app/components/music-card/music-card";
+import NavBar from "@/app/components/nav-bar/nav-bar";
 
 export default function Home() {
   return (
