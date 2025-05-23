@@ -1,6 +1,6 @@
 import { LastfmTrack } from "@/app/types/lastfm-track";
 import styles from "./track-card.module.css";
-import {roboto_bold, roboto_light} from "@/app/fonts/fonts";
+import {roboto_bold, roboto_standard} from "@/app/fonts/fonts";
 import Image from "next/image";
 
 interface TrackCardProps {
@@ -42,7 +42,7 @@ export default function TrackCard({ track }: TrackCardProps) {
 
         <div className={`${styles.track_info_sub} ${roboto_bold.className}`}>
           <p>{track.artist}</p>
-          <p style={{fontSize: 15}} className={roboto_light.className}>{dateDisplay}</p>
+          <p style={{fontSize: 14}} className={roboto_standard.className}>{dateDisplay}</p>
         </div>
       </div>
     </div>

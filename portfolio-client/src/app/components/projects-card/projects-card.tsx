@@ -37,7 +37,7 @@ const projects: Project[] = [
 export default function ProjectCard() {
   return (
     <DefaultCard
-      title="Recent Projects"
+      title="Projects"
       titleClassName={roboto_bold.className}
       // subheading={
       //   <a

@@ -26,7 +26,7 @@ export default function MusicCard() {
 
   return (
     <DefaultCard
-      title="Recently Played Songs"
+      title="Recent Songs"
       titleClassName={roboto_bold.className}
       subheading={
         <a href={"https://www.last.fm/api"} target={"_blank"}>Built with Lastfm API <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{height: "13px", paddingBottom: "0.9px"}}/></a>
