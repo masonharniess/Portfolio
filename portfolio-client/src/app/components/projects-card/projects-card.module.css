@@ -63,15 +63,86 @@
   font-size: 15px;
   color: #EAEAF1B3;
   text-decoration: none;
-  margin: 20px 0 0 0;
-  /*vertical-align: bottom;*/
+  margin: 12px 0 0 0;
+
   transition: transform 0.15s ease-in-out;
-  /*width: fit-content;*/
-  /*justify-content: center;*/
-  /*align-content: center;*/
+
   width: fit-content;
 }
 
 .see_more:hover {
   transform: scale(0.95);
 }
+
+.arrow:hover {
+  transform: scale(0.9);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.arrow:active {
+  transform: scale(0.85);
+}
+
+.arrow_left  { left: -20px; }
+.arrow_right { right: -20px; }
+
+/* --- viewport to hide overflow during slide --- */
+.viewport {
+  position: relative;
+  overflow: hidden;   /* mask the sliding animation */
+}
+
+/* ensure grid is min-height so arrows align nicely */
+.grid {
+  min-height: 100%;   /* keeps layout stable during animation */
+}
+
+.viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+/* every page sits on top of each other */
+.page {
+
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.pager {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.arrow {
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0 solid #ffffff30;
+  backdrop-filter: none;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out;
+}
+
+.arrow:hover:not(.disabled) {
+  transform: scale(0.92);
+}
+
+.arrow:active:not(.disabled) {
+  transform: scale(0.85);
+}
+
+/* greyed-out state */
+.disabled {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+
