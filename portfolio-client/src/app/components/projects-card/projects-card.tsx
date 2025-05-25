@@ -65,6 +65,13 @@ export default function ProjectCard() {
       <DefaultCard
           title="Projects"
           titleClassName={roboto_bold.className}
+          subheading={
+            <a>            More projects on GitHub&nbsp;
+              <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  style={{ height: "13px", paddingBottom: "0.9px" }}
+              /></a>
+          }
           subheadingClassName={roboto_bold.className}
           bodyClassName={roboto_bold.className}
       >
@@ -130,19 +137,19 @@ export default function ProjectCard() {
         </div>
 
         <div className={styles.see_more_parent}>
-          <Link
-              href="https://github.com/masonharniess?tab=repositories&q=&type=public&language=&sort="
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.see_more}
-              style={{ color: "#EAEAF1B3" }}
-          >
-            More projects on GitHub&nbsp;
-            <FontAwesomeIcon
-                icon={faArrowUpRightFromSquare}
-                style={{ height: "13px", paddingBottom: "0.9px" }}
-            />
-          </Link>
+          {/*<Link*/}
+          {/*    href="https://github.com/masonharniess?tab=repositories&q=&type=public&language=&sort="*/}
+          {/*    target="_blank"*/}
+          {/*    rel="noopener noreferrer"*/}
+          {/*    className={styles.see_more}*/}
+          {/*    style={{ color: "#EAEAF1B3" }}*/}
+          {/*>*/}
+          {/*  More projects on GitHub&nbsp;*/}
+          {/*  <FontAwesomeIcon*/}
+          {/*      icon={faArrowUpRightFromSquare}*/}
+          {/*      style={{ height: "13px", paddingBottom: "0.9px" }}*/}
+          {/*  />*/}
+          {/*</Link>*/}
         </div>
       </DefaultCard>
   );
