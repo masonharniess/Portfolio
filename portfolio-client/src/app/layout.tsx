@@ -17,6 +17,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Mason Harniess",
   description: "Portfolio",
+  openGraph: {
+    title: "Mason Harniess",
+    url: "https://masonharniess.com",
+    siteName: "Mason Harniess",
+    images: [
+      {
+        url: "https://media.licdn.com/dms/image/v2/D4E03AQFQslrc5wBBEQ/profile-displayphoto-shrink_800_800/B4EZbz8Vw5HYAk-/0/1747849404321?e=1753920000&v=beta&t=nDFrDw5qSTb7GxsroVRXbuX3A4JFoRHRDhu05dAGDqI",
+        width: 800,
+        height: 800,
+      }
+    ]
+  }
 };
 
 export default function RootLayout({
