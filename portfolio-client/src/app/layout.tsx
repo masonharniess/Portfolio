@@ -16,7 +16,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Mason Harniess",
-  description: "Portfolio",
+  description: "IT Support Technician. First-Class Honours Graduate of Computer Science. Enthusiastic about computer systems, networks, and programming. ",
   openGraph: {
     title: "Mason Harniess",
     url: "https://masonharniess.com",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://media.licdn.com/dms/image/v2/D4E03AQFQslrc5wBBEQ/profile-displayphoto-shrink_800_800/B4EZbz8Vw5HYAk-/0/1747849404321?e=1753920000&v=beta&t=nDFrDw5qSTb7GxsroVRXbuX3A4JFoRHRDhu05dAGDqI",
-        width: 800,
-        height: 800,
+        width: 400,
+        height: 400,
       }
     ]
   }
