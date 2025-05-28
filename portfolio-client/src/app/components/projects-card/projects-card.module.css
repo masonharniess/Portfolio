@@ -133,10 +133,11 @@
 
 .arrow:hover:not(.disabled) {
   transform: scale(0.92);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .arrow:active:not(.disabled) {
-  transform: scale(0.85);
+  transform: scale(0.87);
 }
 
 /* greyed-out state */

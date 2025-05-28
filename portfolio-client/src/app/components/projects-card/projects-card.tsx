@@ -66,7 +66,7 @@ export default function ProjectCard() {
           title="Projects"
           titleClassName={roboto_bold.className}
           subheading={
-            <a>            More projects on GitHub&nbsp;
+            <a href="https://github.com/masonharniess?tab=repositories" target="_blank">More projects on GitHub&nbsp;
               <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
                   style={{ height: "13px", paddingBottom: "0.9px" }}
