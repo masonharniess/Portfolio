@@ -39,11 +39,9 @@ export default function IntroductionCard() {
         </>
       }
     >
-      A First-Class Honours graduate of Computer Science with industry experience
-      in IT. Enthusiastic about computer systems, networks, and programming.
-      Currently employed as a Support Technician at Keyence, leveraging
-      technical skills to provide staff support and enhance operations
-      through IT projects.
+      A First-Class Honours graduate of Computer Science with industry experience with organisational systems and infrastructure.
+      Enthusiastic about computer systems, networks, and programming.
+      Currently employed as an IT Technician at Keyence, leveraging technical skills to provide staff support and enhance operations through IT projects.
     </DefaultCard>
   );
 }

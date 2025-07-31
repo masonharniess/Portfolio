@@ -22,10 +22,10 @@ const projects: Project[] = [
   { title: "Portfolio", description: "Static website built with Next.js.", href: "https://github.com/masonharniess/Portfolio" },
   { title: "Task Manager", description: "Full-stack web app built with ASP.NET Core, SQLite & Next.js.", href: "https://github.com/masonharniess/Swift-Task-Manager" },
   { title: "CLI Text Adventure", description: "A branching path CLI game written in C++.", href: "https://github.com/masonharniess/Text-Adventure-Game" },
-  { title: "General Election Voting System", description: "Full-stack web app built with ASP.NET Core, SQLite & Next.js", href: "https://github.com/masonharniess/General-Election-Voting-System" },
-  { title: "Car Inspections Power App", description: "Mobile application developed with the Microsoft Power Apps platform. (In progress.)", href: "https://www.masonharniess.com/home" },
-  { title: "IT Inventory System", description: "Deployment and management of open-source IT inventory management solution. (In progress.)", href: "https://www.masonharniess.com/home" },
-  { title: "Untitled Project", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do", href: "https://www.masonharniess.com/home" },
+  { title: "General Election Voting System", description: "Full-stack web app built with ASP.NET Core, SQLite & Angular.", href: "https://github.com/masonharniess/General-Election-Voting-System" },
+  // { title: "Car Inspections Power App", description: "Mobile application developed with the Microsoft Power Apps platform. (In progress.)", href: "https://www.masonharniess.com/home" },
+  // { title: "IT Inventory System", description: "Deployment and management of open-source IT inventory management solution. (In progress.)", href: "https://www.masonharniess.com/home" },
+  // { title: "Untitled Project", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do", href: "https://www.masonharniess.com/home" },
 ];
 
 const PAGE_SIZE = 4;
