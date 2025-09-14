@@ -1,6 +1,0 @@
-﻿services:
-  blazorapp1ccdcdsdsds:
-    image: blazorapp1ccdcdsdsds
-    build:
-      context: .
-      dockerfile: Dockerfile
