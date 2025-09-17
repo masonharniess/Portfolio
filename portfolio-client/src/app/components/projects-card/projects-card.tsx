@@ -19,10 +19,13 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { title: "Portfolio", description: "Static website built with Next.js.", href: "https://github.com/masonharniess/Portfolio" },
-  { title: "Task Manager", description: "Full-stack web app built with ASP.NET Core, SQLite & Next.js.", href: "https://github.com/masonharniess/Swift-Task-Manager" },
+  { title: "Portfolio", description: "A static website built with Next.js.", href: "https://github.com/masonharniess/Portfolio" },
+  { title: "AI Research Agent", description: "A Python implementation of an AI agent which can research written queries using the OpenAI API.", href: "https://github.com/masonharniess/AI-Research-Agent" },
+  { title: "Task Manager", description: "A full-stack web app built with ASP.NET Core, SQLite & Next.js.", href: "https://github.com/masonharniess/Swift-Task-Manager" },
   { title: "CLI Text Adventure", description: "A branching path CLI game written in C++.", href: "https://github.com/masonharniess/Text-Adventure-Game" },
-  { title: "General Election Voting System", description: "Full-stack web app built with ASP.NET Core, SQLite & Angular.", href: "https://github.com/masonharniess/General-Election-Voting-System" },
+  { title: "General Election Voting System", description: "A rudimentary web app built with ASP.NET Core, SQLite & Angular.", href: "https://github.com/masonharniess/General-Election-Voting-System" },
+  { title: "Flex Array", description: "A C++ implementation of a dynamic array.", href: "https://github.com/masonharniess/Flex-Array" },
+  { title: "Pygame Space Shooter", description: "A small Space Invaders-like game created in Python with the Pygame framework ", href: "https://github.com/masonharniess/Pygame-Space-Shooter" },
   // { title: "Car Inspections Power App", description: "Mobile application developed with the Microsoft Power Apps platform. (In progress.)", href: "https://www.masonharniess.com/home" },
   // { title: "IT Inventory System", description: "Deployment and management of open-source IT inventory management solution. (In progress.)", href: "https://www.masonharniess.com/home" },
   // { title: "Untitled Project", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do", href: "https://www.masonharniess.com/home" },
