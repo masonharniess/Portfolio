@@ -18,32 +18,63 @@
     </div>
 
     <nav class="section-nav">
-        <a href="#about" class="section-link">About</a>
+        <button class="section-link active" data-section="about">About</button>
         <span class="divider">|</span>
-        <a href="#programming" class="section-link">Programming</a>
+        <button class="section-link" data-section="programming">Programming</button>
         <span class="divider">|</span>
-        <a href="#photography" class="section-link">Photography</a>
+        <button class="section-link" data-section="photography">Photography</button>
     </nav>
 
     <div class="content-box">
-        <div class="bio" id="about">
-            <p>
-                Systems developer @ NHS Blood &amp; Transplant with 2+ years experience in technical roles and a First-Class Honours degree in Computer Science from the University of Leicester.
-            </p>
+        <section class="section-content active" id="about">
+            <div class="bio">
+                <p>
+                    Systems developer @ NHS Blood &amp; Transplant with 2+ years experience in technical roles and a First-Class Honours degree in Computer Science from the University of Leicester.
+                </p>
 
-            <p>
-                Experienced in multiple areas, including web development, database management, and the maintenance/implementation of corporate IT infrastructure. Established competence in handling largescale projects, working both independently, and as part of a team. Familiar with numerous technologies and development languages, including the .NET ecosystem, AWS, and Azure. Enthusiastic about computer systems, networking, and delivering clean, maintainable solutions.
-            </p>
+                <p>
+                    Experienced in multiple areas, including web development, database management, and the maintenance/implementation of corporate IT infrastructure. Established competence in handling large-scale projects, working both independently and as part of a team. Familiar with numerous technologies and development languages, including the .NET ecosystem, AWS, and Azure. Enthusiastic about computer systems, networking, and delivering clean, maintainable solutions.
+                </p>
 
-            <p>
-                Outside of employment, I actively volunteer in my community, and currently spend several hours each week working with children aged 5–13 in a local youth club, where I provide general support with activities.
-            </p>
+                <p>
+                    Outside of employment, I actively volunteer in my community, and currently spend several hours each week working with children aged 5–13 in a local youth club, where I provide general support with activities.
+                </p>
 
-            <p>
-                I also enjoy hobbies such as photography, reading, and exercise.
-            </p>
-        </div>
+                <p>
+                    I also enjoy hobbies such as photography, reading, and exercise.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-content" id="programming">
+            <div class="bio">
+                <p>Programming content will go here.</p>
+            </div>
+        </section>
+
+        <section class="section-content" id="photography">
+            <div class="bio">
+                <p>Photography content will go here.</p>
+            </div>
+        </section>
     </div>
 </div>
+
+<script>
+    const sectionButtons = document.querySelectorAll('.section-link');
+    const sectionContents = document.querySelectorAll('.section-content');
+
+    sectionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetSection = button.dataset.section;
+
+            sectionButtons.forEach(btn => btn.classList.remove('active'));
+            sectionContents.forEach(section => section.classList.remove('active'));
+
+            button.classList.add('active');
+            document.getElementById(targetSection).classList.add('active');
+        });
+    });
+</script>
 </body>
 </html>
