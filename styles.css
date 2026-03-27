@@ -68,19 +68,24 @@ body {
     justify-content: center;
 }
 
-.photo-grid {
+.photo-columns {
     width: min(1100px, 100%);
-    column-count: 4;
-    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
     margin: 0 auto;
+}
+
+.photo-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .photo-item {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 1rem;
-    break-inside: avoid;
 }
 
 .bio {
