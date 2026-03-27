@@ -1,0 +1,22 @@
+body {
+    background-color: #262626;
+    font-family: "Noto Serif";
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.title-box {}
+
+.header {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.content-box {}
+
+.bio {
+    line-height: 1.8;
+    max-width: 65ch;
+    text-align: justify;
+}
