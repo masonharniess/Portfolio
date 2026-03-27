@@ -89,6 +89,17 @@
                 </div>
             </div>
         </section>
+
+        <div class="photo-modal" id="photoModal" aria-hidden="true">
+            <button class="modal-close" id="modalClose" aria-label="Close image viewer">&times;</button>
+            <button class="modal-arrow modal-arrow-left" id="modalPrev" aria-label="Previous image">&#10094;</button>
+
+            <div class="modal-content">
+                <img src="" alt="" class="modal-image" id="modalImage">
+            </div>
+
+            <button class="modal-arrow modal-arrow-right" id="modalNext" aria-label="Next image">&#10095;</button>
+        </div>
     </div>
 </div>
 
@@ -106,6 +117,79 @@
             button.classList.add('active');
             document.getElementById(targetSection).classList.add('active');
         });
+    });
+
+    const photoItems = Array.from(document.querySelectorAll('.photo-item'));
+    const photoModal = document.getElementById('photoModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.getElementById('modalClose');
+    const modalPrev = document.getElementById('modalPrev');
+    const modalNext = document.getElementById('modalNext');
+
+    let currentImageIndex = 0;
+
+    function modalEnabled() {
+        return window.innerWidth > 700;
+    }
+
+    function showImage(index) {
+        currentImageIndex = index;
+        modalImage.src = photoItems[index].src;
+        modalImage.alt = photoItems[index].alt;
+    }
+
+    function openModal(index) {
+        if (!modalEnabled()) return;
+
+        showImage(index);
+        photoModal.classList.add('active');
+        photoModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        photoModal.classList.remove('active');
+        photoModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        modalImage.src = '';
+    }
+
+    function showNextImage() {
+        const nextIndex = (currentImageIndex + 1) % photoItems.length;
+        showImage(nextIndex);
+    }
+
+    function showPrevImage() {
+        const prevIndex = (currentImageIndex - 1 + photoItems.length) % photoItems.length;
+        showImage(prevIndex);
+    }
+
+    photoItems.forEach((photo, index) => {
+        photo.addEventListener('click', () => openModal(index));
+    });
+
+    modalClose.addEventListener('click', closeModal);
+    modalNext.addEventListener('click', showNextImage);
+    modalPrev.addEventListener('click', showPrevImage);
+
+    photoModal.addEventListener('click', (event) => {
+        if (event.target === photoModal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (!photoModal.classList.contains('active')) return;
+
+        if (event.key === 'Escape') closeModal();
+        if (event.key === 'ArrowRight') showNextImage();
+        if (event.key === 'ArrowLeft') showPrevImage();
+    });
+
+    window.addEventListener('resize', () => {
+        if (!modalEnabled() && photoModal.classList.contains('active')) {
+            closeModal();
+        }
     });
 </script>
 </body>
