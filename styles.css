@@ -53,15 +53,34 @@ body {
 }
 
 .content-box {
-    width: 65ch;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .section-content {
     display: none;
+    width: 100%;
 }
 
 .section-content.active {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    width: min(1100px, 100%);
+    column-count: 4;
+    column-gap: 1rem;
+    margin: 0 auto;
+}
+
+.photo-item {
+    width: 100%;
+    height: auto;
     display: block;
+    margin-bottom: 1rem;
+    break-inside: avoid;
 }
 
 .bio {
