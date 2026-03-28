@@ -2,6 +2,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background-color: #262626;
     font-family: "Noto Serif", serif;
@@ -79,11 +89,19 @@ body {
 
 .section-content.active {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bio {
     width: min(100%, 65ch);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.photo-intro {
+    width: min(100%, 65ch);
+    margin: 0 auto 2rem auto;
     line-height: 1.8;
     text-align: justify;
 }
